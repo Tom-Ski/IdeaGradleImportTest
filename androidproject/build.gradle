@@ -1,0 +1,38 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+    }
+
+}
+
+apply plugin: "android"
+
+dependencies {
+    compile group: 'com.google.guava', name: 'guava', version: '22.0'
+
+}
+
+android {
+    buildToolsVersion '25.0.2'
+    compileSdkVersion 23
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+
+        instrumentTest.setRoot('tests')
+    }
+
+}

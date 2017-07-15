@@ -1,0 +1,2 @@
+rootProject.name = 'IDEAGradleImportTest'
+include 'javaproject', 'androidproject'
