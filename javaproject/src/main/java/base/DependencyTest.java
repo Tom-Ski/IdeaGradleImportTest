@@ -1,3 +1,5 @@
+package base;
+
 import com.google.common.collect.ImmutableBiMap;
 
 public class DependencyTest {

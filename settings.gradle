@@ -1,2 +1,3 @@
 rootProject.name = 'IDEAGradleImportTest'
-include 'javaproject', 'androidproject'
+include 'javaproject'
+include 'androidproject'

@@ -2,10 +2,11 @@ buildscript {
     repositories {
         mavenCentral()
         jcenter()
+        google()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.android.tools.build:gradle:3.1.1'
     }
 
 }
@@ -14,12 +15,11 @@ apply plugin: "android"
 
 dependencies {
     compile group: 'com.google.guava', name: 'guava', version: '22.0'
-
 }
 
 android {
-    buildToolsVersion '25.0.2'
-    compileSdkVersion 23
+    buildToolsVersion '27.0.3'
+    compileSdkVersion 26
 
     sourceSets {
         main {
@@ -32,7 +32,6 @@ android {
             jniLibs.srcDirs = ['libs']
         }
 
-        instrumentTest.setRoot('tests')
     }
 
 }

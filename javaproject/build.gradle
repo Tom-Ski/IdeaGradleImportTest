@@ -3,3 +3,9 @@ apply plugin: "java"
 dependencies {
     compile group: 'com.google.guava', name: 'guava', version: '22.0'
 }
+
+task run (type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+
+    main = 'base.DependencyTest'
+}
